@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../assets/fundo.jpg");
+  background-size: cover;
+  overflow-x: hidden;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  flex-direction: column;
+  gap: 5rem;
+}
+.main h1 {
+  color: white;
+  font-size: 4rem;
+}
+/* ################################################## Linha 1 ################################################## */
+
+.linha1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  height: auto;
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.img1 {
+  height: 20rem;
+  width: 20rem;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  border-radius: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.img1 img {
+  height: 15rem;
+  width: 15rem;
+}
+.textocard {
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.textocard h2 {
+  color: white;
+  font-size: 3rem;
+}
+.textocard h3 {
+  text-align: justify;
+  color: white;
+  font-size: 2rem;
+}
+
+/* ################################################## Linha 1 ################################################## */

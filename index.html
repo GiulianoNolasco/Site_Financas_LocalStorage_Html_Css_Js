@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/fontawesome.min.css"
+      integrity="sha512-cHxvm20nkjOUySu7jdwiUxgGy11vuVPE9YeK89geLMLMMEOcKFyS2i+8wo0FOwyQO/bL8Bvq1KMsqK4bbOsPnA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script>
+      function fnCreateStyleSheets() {
+        for (i = 1; i <= 32; i++) {
+          document.createStyleSheet();
+          StyleSheetCount.innerText = "Total Style Sheets = " + i;
+        }
+      }
+    </script>
+  </head>
+
+  <body onLoad="fnCreateStyleSheets()">
+    <main class="main">
+      <h1>TITULO AQUI</h1>
+      <div class="linha1">
+        <div class="img1">
+          <img src="/assets/pensando.jpg" alt="" />
+        </div>
+        <div class="textocard">
+          <h2>Raciocínio Lógico</h2>
+          <h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+            aspernatur similique, velit adipisci harum perferendis. Vitae
+            incidunt, esse doloribus enim sunt voluptas veritatis consectetur
+            itaque laborum repellat laboriosam, autem dolorem!
+          </h3>
+        </div>
+      </div>
+      <div class="linha1">
+        <div class="img1">
+          <img src="/assets/pensando.jpg" alt="" />
+        </div>
+        <div class="textocard">
+          <h2>Raciocínio Lógico</h2>
+          <h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+            aspernatur similique, velit adipisci harum perferendis. Vitae
+            incidunt, esse doloribus enim sunt voluptas veritatis consectetur
+            itaque laborum repellat laboriosam, autem dolorem!
+          </h3>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
