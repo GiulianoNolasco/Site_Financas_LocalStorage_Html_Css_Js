@@ -29,33 +29,21 @@ body {
   color: white;
   font-size: 4rem;
 }
-/* ################################################## Linha 1 ################################################## */
+/* ################################################## Linhas ################################################## */
 
-.linha1 {
+.linha {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5rem;
-  height: auto;
   width: 100%;
-  padding-left: 10%;
-  padding-right: 10%;
-}
-.img1 {
-  height: 20rem;
-  width: 20rem;
-  background-color: rgb(255, 255, 255);
-  display: flex;
-  border-radius: 2rem;
-  justify-content: center;
-  align-items: center;
-}
-.img1 img {
-  height: 15rem;
-  width: 15rem;
+  height: 25rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 .textocard {
   height: 20rem;
+  width: 80rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -71,6 +59,72 @@ body {
   text-align: justify;
   color: white;
   font-size: 2rem;
+  font-weight: 300;
+}
+/* ################################################## Linha 1 ################################################## */
+
+.divimg1 {
+  height: 15rem;
+  width: 15rem;
+  display: flex;
+  border-radius: 2rem;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/pensando.jpg");
+  background-size: cover;
+}
+/* ################################################## Linha 2 ################################################## */
+
+.divimg2 {
+  height: 15rem;
+  width: 15rem;
+  display: flex;
+  border-radius: 2rem;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/js.png");
+  background-size: cover;
+}
+/* ################################################## Linha 3 ################################################## */
+
+.divimg3 {
+  height: 15rem;
+  width: 15rem;
+  display: flex;
+  border-radius: 2rem;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/Orientacaoaobjeto.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
-/* ################################################## Linha 1 ################################################## */
+/* ################################################## Linha 4 ################################################## */
+
+.divimg4 {
+  height: 15rem;
+  width: 15rem;
+  display: flex;
+  border-radius: 2rem;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/java.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* ################################################## Linha 5 ################################################## */
+
+.divimg5 {
+  height: 15rem;
+  width: 15rem;
+  display: flex;
+  border-radius: 2rem;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/nodejs.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+}
