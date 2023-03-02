@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/fontawesome.min.css"
+      integrity="sha512-cHxvm20nkjOUySu7jdwiUxgGy11vuVPE9YeK89geLMLMMEOcKFyS2i+8wo0FOwyQO/bL8Bvq1KMsqK4bbOsPnA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script>
+      function fnCreateStyleSheets() {
+        for (i = 1; i <= 32; i++) {
+          document.createStyleSheet();
+          StyleSheetCount.innerText = "Total Style Sheets = " + i;
+        }
+      }
+    </script>
+    <script src="script.js"></script>
+  </head>
+
+  <body onLoad="fnCreateStyleSheets()">
+    <div class="titulo">
+      <h1>SGF - Sistema de Gestão Financeira</h1>
+
+      <div class="saldoatualizadotitulo">
+        <div class="saldosh2">
+          <h2>Saldo disponível:</h2>
+          <h2>R$ 2547,58</h2>
+        </div>
+        <div class="saldosh2">
+          <h2>Saldo aplicações:</h2>
+          <h2>R$ 67.698,58</h2>
+        </div>
+      </div>
+    </div>
+    <main class="main">
+      <div class="linha">
+        <div class="divimg1" onclick="MostrarLancarDespesa()"></div>
+        <div class="textocard">
+          <h2 onclick="MostrarLancarDespesa()">Lançar despesa</h2>
+        </div>
+      </div>
+      <div class="informacoes" id="informacoesLancarDespesa">
+        <div class="divlabeleinput">
+          <label for="">Nome despesa: </label>
+          <input type="text" />
+        </div>
+        <div class="divlabeleinput">
+          <label for="">Valor despesa: </label>
+          <input class="inputdespesa" type="number" />
+        </div>
+        <button class="botao">Registrar</button>
+      </div>
+    </main>
+  </body>
+</html>
