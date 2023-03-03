@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>SGF - Sistema de Gestão Financeira</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/fontawesome.min.css"
@@ -13,51 +13,111 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="css/style.css" />
-
-    <script>
-      function fnCreateStyleSheets() {
-        for (i = 1; i <= 32; i++) {
-          document.createStyleSheet();
-          StyleSheetCount.innerText = "Total Style Sheets = " + i;
-        }
-      }
-    </script>
-    <script src="script.js"></script>
+    <link rel="shortcut icon" href="assets/cifrao.png" type="image/x-icon" />
   </head>
-
-  <body onLoad="fnCreateStyleSheets()">
+  <body>
     <div class="titulo">
       <h1>SGF - Sistema de Gestão Financeira</h1>
 
       <div class="saldoatualizadotitulo">
         <div class="saldosh2">
-          <h2>Saldo disponível:</h2>
-          <h2>R$ 2547,58</h2>
+          <h2>Entradas:</h2>
+          <span class="incomes">0.00</span>
         </div>
         <div class="saldosh2">
-          <h2>Saldo aplicações:</h2>
-          <h2>R$ 67.698,58</h2>
+          <h2>Saídas:</h2>
+          <span class="expenses">0.00</span>
+        </div>
+        <div class="saldosh2">
+          <h2>Total:</h2>
+          <span class="incomes">0.00</span>
         </div>
       </div>
     </div>
+
     <main class="main">
-      <div class="linha">
-        <div class="divimg1" onclick="MostrarLancarDespesa()"></div>
-        <div class="textocard">
-          <h2 onclick="MostrarLancarDespesa()">Lançar despesa</h2>
+      <div class="bloco">
+        <div class="linha">
+          <div
+            id="Receita1"
+            class="divimg1"
+            onclick="MostrarLancarReceita()"
+          ></div>
+          <div class="textocard">
+            <h2
+              id="Receita2"
+              class="sombraverde"
+              onclick="MostrarLancarReceita()"
+            >
+              Efetuar Registro
+            </h2>
+          </div>
+        </div>
+
+        <div class="informacoes esconder" id="informacoesLancarReceita">
+          <div class="divselect">
+            <select id="type" class="select" onchange="MudaClass()">
+              <option></option>
+              <option value="Entrada" class="option1">Entrada</option>
+              <option value="Saída" class="option2">Saída</option>
+            </select>
+          </div>
+          <div class="divlabeleinput">
+            <label id="label1" for=""> </label>
+            <input type="text" id="desc" />
+          </div>
+          <div class="divlabeleinput">
+            <label id="label2" for=""> </label>
+            <input class="inputreceita" type="number" id="amount" />
+          </div>
+
+          <button id="btnNew" class="botao" ">
+            Registrar
+          </button>
         </div>
       </div>
-      <div class="informacoes" id="informacoesLancarDespesa">
-        <div class="divlabeleinput">
-          <label for="">Nome despesa: </label>
-          <input type="text" />
+      <!-- <div class="bloco">
+        <div class="linha">
+          <div class="divimg2" onclick="MostrarLancarDespesa()"></div>
+          <div class="textocard">
+            <h2 class="sombravermelha" onclick="MostrarLancarDespesa()">
+              Lançar Despesa
+            </h2>
+          </div>
         </div>
-        <div class="divlabeleinput">
-          <label for="">Valor despesa: </label>
-          <input class="inputdespesa" type="number" />
+
+        <div class="informacoes esconder" id="informacoesLancarDespesa">
+          <div class="divlabeleinput">
+            <label for="">Nome despesa: </label>
+            <input type="text" id="nomedespesa" />
+          </div>
+          <div class="divlabeleinput">
+            <label for="">Valor despesa: </label>
+            <input class="inputdespesa" type="number" id="valordespesa" />
+          </div>
+          <button
+            id="btnRegistrarDespesa"
+            class="botao"
+            onclick="RegistrarDespesa()"
+          >
+          Registrar
+          </button>
         </div>
-        <button class="botao">Registrar</button>
+      </div> -->
+      <div class="divtabela">
+        <table class="tabela">
+          <thead>
+            <tr>
+              <th>Descrição</th>
+              <th class="columnAmount">Valor</th>
+              <th class="columnType">Tipo</th>
+              <th class="columnAction"></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
       </div>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>

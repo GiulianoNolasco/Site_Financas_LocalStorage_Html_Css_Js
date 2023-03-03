@@ -9,11 +9,23 @@
 }
 
 body {
-  background-image: url("../assets/fundo.jpg");
+  background-image: url("../assets/fundomercado.jpg");
   background-size: cover;
   overflow-x: hidden;
   width: 100vw;
   min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+.ladoesquerdo {
+  width: 70%;
+  min-height: 100vh;
+}
+.ladodireito {
+  width: 30%;
+  min-height: 100vh;
+  padding: 10rem;
+  font-size: 15rem;
 }
 .titulo {
   display: flex;
@@ -21,20 +33,28 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 3rem;
-  color: white;
-  font-size: 5rem;
+  color: blueviolet;
+  font-size: 7rem;
   padding: 5rem;
 }
 
 .titulo h1:hover {
-  text-shadow: 0 0 2rem white;
+  text-shadow: 0 0 3rem white;
+  transform: scale(1.1);
 }
 .saldoatualizadotitulo {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 5rem;
+  background-color: rgba(249, 246, 246, 0.5);
+  padding: 1rem 10rem 1rem 10rem;
+  border-radius: 3rem;
 }
+.saldoatualizadotitulo:hover {
+  transform: scale(1.1);
+}
+
 .saldosh2 {
   display: flex;
   justify-content: center;
@@ -48,15 +68,109 @@ body {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  min-width: 100vw;
+  min-width: auto;
   min-height: 100vh;
-  gap: 5rem;
 }
-.bloco {
+
+.produtos {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  /* flex-direction: column; */
+  flex-direction: row;
+  height: max-content;
+  width: 90%;
+  gap: 5rem;
+  padding: 5rem;
+}
+
+/* ################################################## PRODUTOS ################################################## */
+.produto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.divimg1 {
+  height: 25rem;
+  width: 25rem;
+  display: flex;
+  border-radius: 2rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("../assets/1pao.jpg");
+  background-size: cover;
+  cursor: pointer;
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 1rem;
+}
+.divimg1 h2 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.divimg1 h3 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.divimg1:hover {
+  box-shadow: 0 0 2rem white;
+  transform: scale(1.1);
+}
+
+.botao {
+  height: 4rem;
+  width: 20rem;
+  font-size: 2rem;
+  border-radius: 1rem;
+  border-color: blueviolet;
+  cursor: pointer;
+  color: blueviolet;
+}
+
+.botao:hover {
+  box-shadow: 0 0 1rem white;
+  background-color: blueviolet;
+  color: white;
+  border: 0.1rem solid white;
+  transform: scale(1.1);
+}
+
+.divimg2 {
+  height: 25rem;
+  width: 25rem;
+  display: flex;
+  border-radius: 2rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("../assets/pirulito.jpg");
+  background-size: cover;
+  cursor: pointer;
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 1rem;
+}
+
+.divimg3 {
+  height: 25rem;
+  width: 25rem;
+  display: flex;
+  border-radius: 2rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("../assets/bala.jpg");
+  background-size: cover;
+  cursor: pointer;
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 1rem;
 }
 
 .divtabela {
@@ -68,18 +182,13 @@ body {
 }
 .tabela {
   height: 300px;
-  width: 800px;
-  color: white;
+  width: 500px;
+  color: black;
   font-size: 10rem;
-}
-.option1 {
-  background-color: green;
-}
-.option2 {
-  background-color: red;
+  background-color: beige;
 }
 /* ################################################## Linhas ################################################## */
-
+/*
 .linha {
   display: flex;
   justify-content: center;
@@ -163,9 +272,9 @@ body {
 }
 .divselect {
   font-size: 2rem;
-}
+}*/
 /* ################################################## Linha 1 ################################################## */
-
+/*
 .divimg1 {
   height: 15rem;
   width: 15rem;
@@ -192,9 +301,9 @@ body {
   font-size: 2rem;
   color: red;
   font-size: 2rem;
-}
+}*/
 /* ################################################## Linha 1 ################################################## */
-
+/*
 .divimg2 {
   height: 15rem;
   width: 15rem;
@@ -214,4 +323,5 @@ body {
 .inputdespesa {
   font-size: 2rem;
   color: red;
-}
+} 
+*/
