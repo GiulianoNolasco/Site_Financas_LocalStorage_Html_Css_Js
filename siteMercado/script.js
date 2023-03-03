@@ -2,22 +2,141 @@
 
 const tbody = document.querySelector("tbody");
 const btnNew = document.querySelector("#btnNew");
-// const incomes = document.querySelector(".incomes");
-// const expenses = document.querySelector(".expenses");
-// const total = document.querySelector(".total");
+const quantidade = document.querySelector("#quantidade");
+const total = document.querySelector("#total");
 
 let items;
 
-btnNew.onclick = () => {
-  items.push({
-    descricao: Pao,
-    preco: 2,
-    Qt: 1,
-  });
+btnProduto1.onclick = () => {
+  const temOProduto = items.find((produto) => produto.product === "Pão");
+  if (temOProduto) {
+    temOProduto.amount++;
+  } else {
+    items.push({
+      product: "Pão",
+      amount: 1,
+      price: 2,
+    });
+  }
 
   setItensBD();
 
   loadItens();
+};
+
+btnProduto2.onclick = () => {
+  const temOProduto = items.find((produto) => produto.product === "Feijão");
+  if (temOProduto) {
+    temOProduto.amount++;
+  } else {
+    items.push({
+      product: "Feijão",
+      amount: 1,
+      price: 7.87,
+    });
+  }
+
+  setItensBD();
+
+  loadItens();
+};
+
+btnProduto3.onclick = () => {
+  const temOProduto = items.find((produto) => produto.product === "Arroz");
+  if (temOProduto) {
+    temOProduto.amount++;
+  } else {
+    items.push({
+      product: "Arroz",
+      amount: 1,
+      price: 6.98,
+    });
+  }
+
+  setItensBD();
+
+  loadItens();
+};
+
+btnProduto4.onclick = () => {
+  const temOProduto = items.find((produto) => produto.product === "Farinha");
+  if (temOProduto) {
+    temOProduto.amount++;
+  } else {
+    items.push({
+      product: "Farinha",
+      amount: 1,
+      price: 8.99,
+    });
+  }
+
+  setItensBD();
+
+  loadItens();
+};
+
+btnProduto5.onclick = () => {
+  const temOProduto = items.find((produto) => produto.product === "Açucar");
+  if (temOProduto) {
+    temOProduto.amount++;
+  } else {
+    items.push({
+      product: "Açucar",
+      amount: 1,
+      price: 4.7,
+    });
+  }
+
+  setItensBD();
+
+  loadItens();
+};
+
+btnProduto6.onclick = () => {
+  const temOProduto = items.find((produto) => produto.product === "Macarrão");
+  if (temOProduto) {
+    temOProduto.amount++;
+  } else {
+    items.push({
+      product: "Macarrão",
+      amount: 1,
+      price: 2.9,
+    });
+  }
+
+  setItensBD();
+
+  loadItens();
+};
+
+btnProduto7.onclick = () => {
+  const temOProduto = items.find((produto) => produto.product === "Bolacha");
+  if (temOProduto) {
+    temOProduto.amount++;
+  } else {
+    items.push({
+      product: "Bolacha",
+      amount: 1,
+      price: 6.4,
+    });
+  }
+
+  btnProduto8.onclick = () => {
+    const temOProduto = items.find((produto) => produto.product === "Óleo");
+    if (temOProduto) {
+      temOProduto.amount++;
+    } else {
+      items.push({
+        product: "Óleo",
+        amount: 1,
+        price: 8.74,
+      });
+    }
+
+    setItensBD();
+
+    loadItens();
+  };
 };
 
 function deleteItem(index) {
@@ -26,21 +145,39 @@ function deleteItem(index) {
   loadItens();
 }
 
-// function insertItem(item, index) {
-//   let tr = document.createElement("tr");
+function aumentaItem(index) {
+  items[index].amount++;
 
-//   tr.innerHTML = `
-//     <td>${item.descricao}</td>
-//     <td>R$ ${item.preco}</td>
-//     <td> ${item.Qt}</td>
-//     }</td>
-//     <td class="columnAction">
-//       <button onclick="deleteItem(${index})">Deletar</button>
-//     </td>
-//   `;
+  setItensBD();
+  loadItens();
+}
+function diminuiItem(index) {
+  items[index].amount--;
+  setItensBD();
+  loadItens();
+}
 
-//   tbody.appendChild(tr);
-// }
+function insertItem(item, index) {
+  let tr = document.createElement("tr");
+
+  tr.innerHTML = `
+  <td class="columnAction">
+  <button class="botaoIconesAumentar" onclick="aumentaItem(${index})"><i class="fa-solid fa-plus"></i></button>
+  </td>
+  <td class="columnAction">
+  <button class="botaoIconesDiminuir" onclick="diminuiItem(${index})"><i class="fa-solid fa-minus"></i></button>
+  </td>
+    <td>${item.product}</td>
+    <td>${item.amount}</td>
+    <td>R$${Math.abs(item.price).toFixed(2)}</td>
+    <td>R$${Math.abs(item.price * item.amount).toFixed(2)}</td>
+  <td class="columnAction">
+  <button class="botaoIconesDel" onclick="deleteItem(${index})"><i class="fa-solid fa-x"></i></button>
+  </td>
+  `;
+
+  tbody.appendChild(tr);
+}
 
 function loadItens() {
   items = getItensBD();
@@ -49,29 +186,28 @@ function loadItens() {
     insertItem(item, index);
   });
 
-  // getTotals();
+  getTotals();
 }
 
-// function getTotals() {
-//   const precoIncomes = items
-//     .filter((item) => item.type === "Entrada")
-//     .map((transaction) => Number(transaction.preco));
-//   const precoExpenses = items
-//     .filter((item) => item.type === "Saída")
-//     .map((transaction) => Number(transaction.preco));
-//   const totalIncomes = precoIncomes
-//     .reduce((acc, cur) => acc + cur, 0)
-//     .toFixed(2);
-//   const totalExpenses = Math.abs(
-//     precoExpenses.reduce((acc, cur) => acc + cur, 0)
-//   ).toFixed(2);
-//   const totalItems = (totalIncomes - totalExpenses).toFixed(2);
-//   Qt.innerHTML = totalIncomes;
-//   total.innerHTML = totalItems;
-// }
+function getTotals() {
+  let totalProdutos = 0;
+  let totalPrecos = 0;
+  let quantidadeProdutos = 0;
 
-const getItensBD = () => JSON.parse(localStorage.getItem("bancoMercado")) ?? [];
-const setItensBD = () =>
-  localStorage.setItem("bancoMercado", JSON.stringify(items));
+  items.forEach((element) => {
+    quantidadeProdutos++;
+    totalProdutos += element.amount;
+    totalPrecos += element.price;
+  });
+
+  let valorCompraTotal = totalProdutos * totalPrecos;
+
+  produtosQt.innerHTML = quantidadeProdutos;
+  quantidade.innerHTML = totalProdutos;
+  total.innerHTML = `R$ ${Math.abs(valorCompraTotal).toFixed(2)}`;
+}
+
+const getItensBD = () => JSON.parse(localStorage.getItem("teste")) ?? [];
+const setItensBD = () => localStorage.setItem("teste", JSON.stringify(items));
 
 loadItens();

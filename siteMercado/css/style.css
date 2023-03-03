@@ -15,17 +15,20 @@ body {
   width: 100vw;
   min-height: 100vh;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: start;
 }
 .ladoesquerdo {
-  width: 70%;
-  min-height: 100vh;
+  width: 80%;
+  /* min-height: 100vh; */
 }
 .ladodireito {
-  width: 30%;
-  min-height: 100vh;
-  padding: 10rem;
+  /* min-height: 100vh; */
+  padding: 3rem;
   font-size: 15rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .titulo {
   display: flex;
@@ -34,7 +37,7 @@ body {
   flex-direction: column;
   gap: 3rem;
   color: blueviolet;
-  font-size: 7rem;
+  font-size: 14rem;
   padding: 5rem;
 }
 
@@ -66,10 +69,8 @@ body {
 .main {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  min-width: auto;
-  min-height: 100vh;
+  /* align-items: center; */
+  /* min-height: 100vh; */
 }
 
 .produtos {
@@ -79,11 +80,15 @@ body {
   align-items: center;
   flex-direction: row;
   height: max-content;
-  width: 90%;
   gap: 5rem;
-  padding: 5rem;
 }
-
+.botaofinalizarDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+}
 /* ################################################## PRODUTOS ################################################## */
 .produto {
   display: flex;
@@ -93,44 +98,32 @@ body {
   gap: 2rem;
   flex-direction: column;
 }
-
-.divimg1 {
-  height: 25rem;
-  width: 25rem;
-  display: flex;
-  border-radius: 2rem;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  background-image: url("../assets/1pao.jpg");
-  background-size: cover;
-  cursor: pointer;
-  font-size: 3rem;
-  font-weight: 700;
-  padding: 1rem;
-}
-.divimg1 h2 {
+/* .divimg1 h2 {
   font-size: 3rem;
   font-weight: 700;
 }
 .divimg1 h3 {
   font-size: 2rem;
   font-weight: 500;
-}
+} */
 
-.divimg1:hover {
+.produtosEfeito:hover {
   box-shadow: 0 0 2rem white;
   transform: scale(1.1);
 }
 
 .botao {
-  height: 4rem;
-  width: 20rem;
-  font-size: 2rem;
+  height: auto;
+  width: auto;
+  font-size: 3rem;
   border-radius: 1rem;
   border-color: blueviolet;
   cursor: pointer;
   color: blueviolet;
+  padding: 1rem 3rem 1rem 3rem;
+}
+.botao i {
+  font-size: 2rem;
 }
 
 .botao:hover {
@@ -141,187 +134,392 @@ body {
   transform: scale(1.1);
 }
 
-.divimg2 {
-  height: 25rem;
-  width: 25rem;
-  display: flex;
-  border-radius: 2rem;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  background-image: url("../assets/pirulito.jpg");
-  background-size: cover;
+.botaoIconesDel {
+  height: 4rem;
+  width: 4rem;
+  font-size: 7rem;
+  border-radius: 1rem;
+  border-color: red;
   cursor: pointer;
-  font-size: 3rem;
-  font-weight: 700;
-  padding: 1rem;
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.divimg3 {
-  height: 25rem;
-  width: 25rem;
-  display: flex;
-  border-radius: 2rem;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  background-image: url("../assets/bala.jpg");
-  background-size: cover;
-  cursor: pointer;
-  font-size: 3rem;
-  font-weight: 700;
-  padding: 1rem;
+.botaoIconesDel:hover {
+  box-shadow: 0 0 1rem white;
+  background-color: red;
+  color: white;
+  border: 0.2rem solid white;
+  transform: scale(1.1);
 }
 
+.botaoIconesDiminuir {
+  height: 4rem;
+  width: 4rem;
+  font-size: 3rem;
+  border-radius: 1rem;
+  border-color: rgb(230, 230, 4);
+  cursor: pointer;
+  color: rgb(230, 230, 4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.botaoIconesDiminuir:hover {
+  box-shadow: 0 0 1rem white;
+  background-color: rgb(230, 230, 4);
+  color: white;
+  border: 0.2rem solid white;
+  transform: scale(1.1);
+}
+
+.botaoIconesAumentar {
+  height: 4rem;
+  width: 4rem;
+  font-size: 3rem;
+  border-radius: 1rem;
+  border-color: green;
+  cursor: pointer;
+  color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.botaoIconesAumentar:hover {
+  box-shadow: 0 0 1rem white;
+  background-color: green;
+  color: white;
+  border: 0.2rem solid white;
+  transform: scale(1.1);
+}
 .divtabela {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: rgb(49, 47, 47);
 }
 .tabela {
-  height: 300px;
-  width: 500px;
+  height: auto;
+  width: auto;
   color: black;
   font-size: 10rem;
-  background-color: beige;
+  background-color: rgba(249, 246, 246, 0.5);
+  padding: 1rem 1rem 1rem 1rem;
+  border-radius: 3rem;
 }
-/* ################################################## Linhas ################################################## */
-/*
-.linha {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5rem;
-  width: 100%;
-  height: 25rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
-}
-.textocard {
-  height: 20rem;
-  width: 30rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-
-.textocard h2 {
-  color: white;
+th {
+  padding: 1rem;
+  width: 20px;
   font-size: 3rem;
-  cursor: pointer;
 }
+td {
+  width: 20px;
 
-.sombrabranca:hover {
-  text-shadow: 0 0 2rem white;
+  padding: 1rem;
+  font-size: 3rem;
 }
+/* PRODUTOS ########################################################### */
 
-.sombravermelha:hover {
-  text-shadow: 0 0 2rem red;
-}
-
-.sombraverde:hover {
-  text-shadow: 0 0 2rem green;
-}
-.informacoes {
+.TESTE {
+  height: 25rem;
+  width: 25rem;
   display: flex;
+  border-radius: 2rem;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 3rem;
-}
-.informacoes label {
-  color: white;
-  font-size: 2rem;
-}
-
-.informacoes input {
-  font-size: 2rem;
-}
-.botao {
-  height: 4rem;
-  width: 20rem;
-  font-size: 2.5rem;
-  border-radius: 1rem;
+  background-size: cover;
   cursor: pointer;
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 1rem;
+  background-color: white;
 }
 
-.botao:hover {
-  box-shadow: 0 0 1rem white;
-  background-color: black;
-  color: white;
-  border: 0.1rem solid white;
-}
-.divlabeleinput {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
-.esconder {
-  display: none;
-}
-.select {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-}
-.divselect {
-  font-size: 2rem;
-}*/
-/* ################################################## Linha 1 ################################################## */
-/*
-.divimg1 {
-  height: 15rem;
-  width: 15rem;
+.produto_1 {
+  height: 25rem;
+  width: 25rem;
   display: flex;
   border-radius: 2rem;
   justify-content: center;
   align-items: center;
-  background-image: url("../assets/receita.png");
-  background-size: cover;
+  background-image: url("../assets/1pao.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   cursor: pointer;
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 1rem;
+  background-color: white;
 }
 
-.divimg1:hover {
-  box-shadow: 0 0 2rem green;
-}
-
-.inputreceita {
-  font-size: 2rem;
-  color: green;
-  font-size: 2rem;
-}
-
-.inputdespesa {
-  font-size: 2rem;
-  color: red;
-  font-size: 2rem;
-}*/
-/* ################################################## Linha 1 ################################################## */
-/*
-.divimg2 {
-  height: 15rem;
-  width: 15rem;
+.produto_2 {
+  height: 25rem;
+  width: 25rem;
   display: flex;
   border-radius: 2rem;
   justify-content: center;
   align-items: center;
-  background-image: url("../assets/despesa.jpg");
-  background-size: cover;
+  background-image: url("../assets/2feijao.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   cursor: pointer;
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 1rem;
+  background-color: white;
 }
 
-.divimg2:hover {
-  box-shadow: 0 0 2rem red;
+.produto_3 {
+  height: 25rem;
+  width: 25rem;
+  display: flex;
+  border-radius: 2rem;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/3arroz.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 1rem;
+  background-color: white;
 }
 
-.inputdespesa {
-  font-size: 2rem;
-  color: red;
-} 
-*/
+.produto_4 {
+  height: 25rem;
+  width: 25rem;
+  display: flex;
+  border-radius: 2rem;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/4farinha.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 1rem;
+  background-color: white;
+}
+
+.produto_5 {
+  height: 25rem;
+  width: 25rem;
+  display: flex;
+  border-radius: 2rem;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/5acucar.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 1rem;
+  background-color: white;
+}
+
+.produto_6 {
+  height: 25rem;
+  width: 25rem;
+  display: flex;
+  border-radius: 2rem;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/6macarrao.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 1rem;
+  background-color: white;
+}
+
+.produto_7 {
+  height: 25rem;
+  width: 25rem;
+  display: flex;
+  border-radius: 2rem;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/7biscoito.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 1rem;
+  background-color: white;
+}
+
+.produto_8 {
+  height: 25rem;
+  width: 25rem;
+  display: flex;
+  border-radius: 2rem;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/8oleo.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 1rem;
+  background-color: white;
+}
+
+/* Media query ################################################################################ */
+
+@media screen and (max-width: 320px) {
+  * {
+    font-size: 25%;
+  }
+
+  .main {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+  }
+  .saldoatualizadotitulo {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 568px) {
+  * {
+    font-size: 27%;
+  }
+
+  .main {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+  }
+  .saldoatualizadotitulo {
+    display: none;
+  }
+
+  .titulo {
+    font-size: 15rem;
+  }
+}
+
+@media screen and (min-width: 569px) and (max-width: 768px) {
+  * {
+    font-size: 30%;
+  }
+
+  .main {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .titulo {
+    font-size: 17rem;
+  }
+  .saldosh2 {
+    font-size: 8rem;
+  }
+  .saldoatualizadotitulo i {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  * {
+    font-size: 35%;
+  }
+
+  .main {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .titulo {
+    font-size: 17rem;
+  }
+  .saldosh2 {
+    font-size: 8rem;
+  }
+  .saldoatualizadotitulo i {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+  * {
+    font-size: 37%;
+  }
+
+  .titulo {
+    font-size: 17rem;
+  }
+  .saldosh2 {
+    font-size: 8rem;
+  }
+  .saldoatualizadotitulo i {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1367px) and (max-width: 1680px) {
+  * {
+    font-size: 40%;
+  }
+
+  .titulo {
+    font-size: 17rem;
+  }
+  .saldosh2 {
+    font-size: 8rem;
+  }
+  .saldoatualizadotitulo i {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1681px) {
+  * {
+    font-size: 45%;
+  }
+
+  .titulo {
+    font-size: 17rem;
+    padding-bottom: 0;
+  }
+  .saldosh2 {
+    font-size: 8rem;
+  }
+  .saldoatualizadotitulo i {
+    font-size: 2.5rem;
+  }
+
+  .ladoesquerdo {
+    padding: 15rem;
+  }
+  .ladodireito {
+    padding: 15rem;
+  }
+}

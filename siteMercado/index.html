@@ -13,178 +13,146 @@
 </head>
 
 <body>
-  <div class="ladoesquerdo">
+  <!-- HEADER #################################################################### -->
 
+  <header >
     <div class="titulo">
       <h1>Mercado - Vendemos alimentos</h1>
 
-      <div class="saldoatualizadotitulo"><i class="fa-sharp fa-solid fa-cart-shopping"></i>
+      <div class="saldoatualizadotitulo">
+        <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+        <div class="saldosh2">
+          <h2>Produtos:</h2>
+          <span id="produtosQt">0</span>
+        </div>
         <div class="saldosh2">
           <h2>Quantidade:</h2>
-          <span class="incomes">0</span>
+          <span id="quantidade">0</span>
         </div>
 
         <div class="saldosh2">
           <h2>Valor total:</h2>
-          <span class="total">0.00</span>
+          <span id="total">0.00</span>
         </div>
-        <button id="btnNew" class="botao">
+        <button id="Finalizar" class="botao">
           Finalizar compra <i class="fa-sharp fa-solid fa-cart-shopping"></i>
         </button>
       </div>
     </div>
-
-    <main class="main">
-
-
-
+  </header>
+  <!-- MAIN #################################################################### -->
+  <main class="main">
+    <div class="ladoesquerdo">
       <div class="produtos">
+
+
         <div class="produto">
-          <div class="divimg1">
-            <h2>Pão</h2>
-            <h3>Aquele que mata a fome</h3>
+          <div class="produto_1 produtosEfeito">
+            <h2></h2>
+            <h3></h3>
           </div>
-          <button id="btnNew" class="botao">
-            Adicionar <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-          </button>
-        </div>
-
-<!-- 
-
-        <div class="produto">
-          <div class="divimg1" onclick="MostrarLancarDespesa()"></div>
-          <button id="btnNew" class="botao" onclick="Registrar()">
-            Adicionar <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-          </button>
-        </div>
-        <div class="produto">
-          <div class="divimg1" onclick="MostrarLancarDespesa()"></div>
-          <button id="btnNew" class="botao" onclick="Registrar()">
-            Adicionar <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-          </button>
-        </div>
-        <div class="produto">
-          <div class="divimg1" onclick="MostrarLancarDespesa()"></div>
-          <button id="btnNew" class="botao" onclick="Registrar()">
-            Adicionar <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-          </button>
-        </div>
-        <div class="produto">
-          <div class="divimg1" onclick="MostrarLancarDespesa()"></div>
-          <button id="btnNew" class="botao" onclick="Registrar()">
-            Adicionar <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-          </button>
-        </div>
-        <div class="produto">
-          <div class="divimg1" onclick="MostrarLancarDespesa()"></div>
-          <button id="btnNew" class="botao" onclick="Registrar()">
-            Adicionar <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-          </button>
-        </div>
-        <div class="produto">
-          <div class="divimg1" onclick="MostrarLancarDespesa()"></div>
-          <button id="btnNew" class="botao" onclick="Registrar()">
-            Adicionar <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-          </button>
-        </div>
-        <div class="produto">
-          <div class="divimg1" onclick="MostrarLancarDespesa()"></div>
-          <button id="btnNew" class="botao" onclick="Registrar()">
-            Adicionar <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-          </button>
-        </div>
-        <div class="produto">
-          <div class="divimg1" onclick="MostrarLancarDespesa()"></div>
-          <button id="btnNew" class="botao" onclick="Registrar()">
-            Adicionar <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-          </button>
-        </div>
-        <div class="produto">
-          <div class="divimg1" onclick="MostrarLancarDespesa()"></div>
-          <button id="btnNew" class="botao" onclick="Registrar()">
-            Adicionar <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-          </button>
-        </div>
-
-
-        <div class="produto">
-          <div class="divimg1" onclick="MostrarLancarDespesa()"></div>
-          <button id="btnNew" class="botao" onclick="Registrar()">
-            Adicionar <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-          </button>
-        </div>
-        <div class="produto">
-          <div class="divimg1" onclick="MostrarLancarDespesa()"></div>
-          <button id="btnNew" class="botao" onclick="Registrar()">
-            Adicionar <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-          </button>
-        </div>
-        <div class="produto">
-          <div class="divimg1" onclick="MostrarLancarDespesa()"></div>
-          <button id="btnNew" class="botao" onclick="Registrar()">
-            Adicionar <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-          </button>
-        </div>
-        <div class="produto">
-          <div class="divimg1" onclick="MostrarLancarDespesa()"></div>
-          <button id="btnNew" class="botao" onclick="Registrar()">
-            Adicionar <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-          </button>
-        </div>
-        <div class="produto">
-          <div class="divimg1" onclick="MostrarLancarDespesa()"></div>
-          <button id="btnNew" class="botao" onclick="Registrar()">
-            Adicionar <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-          </button>
-        </div>
-        <div class="produto">
-          <div class="divimg1" onclick="MostrarLancarDespesa()"></div>
-          <button id="btnNew" class="botao" onclick="Registrar()">
-            Adicionar <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-          </button>
-        </div>
-        <div class="produto">
-          <div class="divimg1" onclick="MostrarLancarDespesa()"></div>
-          <button id="btnNew" class="botao" onclick="Registrar()">
-            Adicionar <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-          </button>
-        </div>
-        <div class="produto">
-          <div class="divimg2" onclick="MostrarLancarDespesa()"></div>
-          <button id="btnNew" class="botao" onclick="Registrar()">
-            Adicionar <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-          </button>
-        </div>
-        <div class="produto">
-          <div class="divimg2" onclick="MostrarLancarDespesa()"></div>
-          <button id="btnNew" class="botao" onclick="Registrar()">
+          <button id="btnProduto1" class="botao">
             Adicionar <i class="fa-sharp fa-solid fa-cart-shopping"></i>
           </button>
         </div>
 
         <div class="produto">
-          <div class="divimg3" onclick="MostrarLancarDespesa()"></div>
-          <button id="btnNew" class="botao" onclick="Registrar()">
+          <div class="produto_2 produtosEfeito">
+            <h2></h2>
+            <h3></h3>
+          </div>
+          <button id="btnProduto2" class="botao">
             Adicionar <i class="fa-sharp fa-solid fa-cart-shopping"></i>
           </button>
         </div>
-      </div> -->
 
+        <div class="produto">
+          <div class="produto_3 produtosEfeito ">
+            <h2></h2>
+            <h3></h3>
+          </div>
+          <button id="btnProduto3" class="botao">
+            Adicionar <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
 
-  </div>
-  <div class="ladodireito">
-    <table class="tabela">
-      <thead>
-        <tr>
-          <th>Descrição</th>
-          <th class="columnAmount">Valor</th>
-          <th class="columnType">Tipo</th>
-          <th class="columnAction"></th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-  </div>
+        <div class="produto">
+          <div class="produto_4 produtosEfeito ">
+            <h2></h2>
+            <h3></h3>
+          </div>
+          <button id="btnProduto4" class="botao">
+            Adicionar <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
+        
+        <div class="produto">
+          <div class="produto_5 produtosEfeito ">
+            <h2></h2>
+            <h3></h3>
+          </div>
+          <button id="btnProduto5" class="botao">
+            Adicionar <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
+        
+        <div class="produto">
+          <div class="produto_6 produtosEfeito ">
+            <h2></h2>
+            <h3></h3>
+          </div>
+          <button id="btnProduto6" class="botao">
+            Adicionar <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
+        
+        <div class="produto">
+          <div class="produto_7 produtosEfeito ">
+            <h2></h2>
+            <h3></h3>
+          </div>
+          <button id="btnProduto7" class="botao">
+            Adicionar <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
+        
+        <div class="produto">
+          <div class="produto_8 produtosEfeito ">
+            <h2></h2>
+            <h3></h3>
+          </div>
+          <button id="btnProduto8" class="botao">
+            Adicionar <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="ladodireito">
+      <table class="tabela">
+        <thead>
+          <tr>
+            <th>Adc</th>
+            <th>Red</th>
+            <th>Desc</th>
+            <th>Qt</th>
+            <th>Valor</th>
+            <th>Total</th>
+            <th class="columnAction">Del</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div class="botaofinalizarDiv">
+        <button id="Finalizar" class="botao">
+          Finalizar compra <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+        </button>
+      </div>
+
+    </div>
+
+  </main>
   <script src="script.js"></script>
 </body>
 

@@ -128,8 +128,7 @@ function getTotals() {
   total.innerHTML = totalItems;
 }
 
-const getItensBD = () => JSON.parse(localStorage.getItem("db_items")) ?? [];
-const setItensBD = () =>
-  localStorage.setItem("db_items", JSON.stringify(items));
+const getItensBD = () => JSON.parse(localStorage.getItem("banco")) ?? [];
+const setItensBD = () => localStorage.setItem("banco", JSON.stringify(items));
 
 loadItens();
