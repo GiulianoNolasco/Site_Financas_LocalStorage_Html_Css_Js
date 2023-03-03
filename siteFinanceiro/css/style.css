@@ -64,7 +64,9 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: rgb(49, 47, 47);
+  background-color: black;
+  padding: 4rem;
+  border-radius: 2rem;
 }
 .tabela {
   height: 300px;
@@ -72,12 +74,38 @@ body {
   color: white;
   font-size: 10rem;
 }
+
+th {
+  font-size: 3rem;
+}
+td {
+  font-size: 2rem;
+}
+
+td button {
+  font-size: 3rem;
+  color: red;
+  border: 0.1rem solid red;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.alinhar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: aliceblue;
+}
 .option1 {
   background-color: green;
 }
 .option2 {
   background-color: red;
 }
+
 /* ################################################## Linhas ################################################## */
 
 .linha {

@@ -6,6 +6,7 @@ const quantidade = document.querySelector("#quantidade");
 const total = document.querySelector("#total");
 
 let items;
+// ##### CADASTRAR PRODUTOS ######
 
 btnProduto1.onclick = () => {
   const temOProduto = items.find((produto) => produto.product === "Pão");
@@ -139,6 +140,8 @@ btnProduto7.onclick = () => {
   };
 };
 
+// CONTINUACAO LOCAL STORAGE #########
+
 function deleteItem(index) {
   items.splice(index, 1);
   setItensBD();
@@ -207,7 +210,9 @@ function getTotals() {
   total.innerHTML = `R$ ${Math.abs(valorCompraTotal).toFixed(2)}`;
 }
 
-const getItensBD = () => JSON.parse(localStorage.getItem("teste")) ?? [];
-const setItensBD = () => localStorage.setItem("teste", JSON.stringify(items));
+const getItensBD = () =>
+  JSON.parse(localStorage.getItem("BANCO_MERCADO")) ?? [];
+const setItensBD = () =>
+  localStorage.setItem("BANCO_MERCADO", JSON.stringify(items));
 
 loadItens();

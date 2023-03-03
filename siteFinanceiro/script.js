@@ -87,7 +87,7 @@ function insertItem(item, index) {
         : '<i class="bx bxs-chevron-down-circle"></i>'
     }</td>
     <td class="columnAction">
-      <button onclick="deleteItem(${index})"><i class='bx bx-trash'></i></button>
+      <button onclick="deleteItem(${index})"><i class="fa-solid fa-x"></i></button>
     </td>
   `;
 
