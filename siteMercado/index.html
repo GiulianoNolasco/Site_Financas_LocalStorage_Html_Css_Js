@@ -15,7 +15,7 @@
 <body>
   <!-- HEADER #################################################################### -->
 
-  <header >
+  <header>
     <div class="titulo">
       <h1>Mercado - Vendemos alimentos</h1>
 
@@ -34,13 +34,15 @@
           <h2>Valor total:</h2>
           <span id="total">0.00</span>
         </div>
-        <button id="Finalizar" class="botao">
-          Finalizar compra <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-        </button>
+        <a href="#modalFinalizarCompra">
+          <button id="Finalizar" class="botao">
+            Finalizar compra <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+          </button>
+        </a>
       </div>
     </div>
   </header>
-  
+
   <main class="main">
 
     <!--  ############################# LADO DIREITO - TABELA ############################# -->
@@ -88,7 +90,7 @@
             Adicionar <i class="fa-sharp fa-solid fa-cart-shopping"></i>
           </button>
         </div>
-        
+
         <div class="produto">
           <div class="produto_5 produtosEfeito ">
             <h2></h2>
@@ -98,7 +100,7 @@
             Adicionar <i class="fa-sharp fa-solid fa-cart-shopping"></i>
           </button>
         </div>
-        
+
         <div class="produto">
           <div class="produto_6 produtosEfeito ">
             <h2></h2>
@@ -108,7 +110,7 @@
             Adicionar <i class="fa-sharp fa-solid fa-cart-shopping"></i>
           </button>
         </div>
-        
+
         <div class="produto">
           <div class="produto_7 produtosEfeito ">
             <h2></h2>
@@ -118,7 +120,7 @@
             Adicionar <i class="fa-sharp fa-solid fa-cart-shopping"></i>
           </button>
         </div>
-        
+
         <div class="produto">
           <div class="produto_8 produtosEfeito ">
             <h2></h2>
@@ -131,7 +133,7 @@
       </div>
     </div>
     </div>
-<!--  ############################# LADO DIREITO - TABELA ############################# -->
+    <!--  ############################# LADO DIREITO - TABELA ############################# -->
     <div class="ladodireito">
       <table class="tabela">
         <thead>
@@ -147,14 +149,51 @@
         </thead>
         <tbody></tbody>
       </table>
+      <div class="saldoatualizadotabela">
+        <div class="saldosh2tabela">
+          <h2>Produtos:</h2>
+          <span id="produtosQtTabela">0</span>
+        </div>
+        <div class="saldosh2tabela">
+          <h2>Quant:</h2>
+          <span id="quantidadeTabela">0</span>
+        </div>
+
+        <div class="saldosh2tabela">
+          <h2>Valor total:</h2>
+          <span id="totalTabela">0.00</span>
+        </div>
+      </div>
+
       <div class="botaofinalizarDiv">
-        <button id="Finalizar" class="botao">
-          Finalizar compra <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-        </button>
+        <a href="#modalFinalizarCompra">
+          <button id="Finalizar" class="botao">
+            Finalizar compra <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+          </button>
+        </a>
       </div>
     </div>
-
   </main>
+
+
+  <div id="modalFinalizarCompra" class="modal">
+    <div class="modalTela">
+      <div class="saldosh2">
+        <h1>Compra Finalizada</h1>
+        <h1 >Com Sucesso!</h1>
+      </div>
+      <div class="saldosh2">
+        <h1 >Obrigado pela preferência!</h1>
+      </div>
+
+      <div class="modal__footer">
+        <a href="#"> <button class="botao">Voltar</button> </a>
+      </div>
+
+      <!-- <a href="#" class="modal__close">&times;</a> -->
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 

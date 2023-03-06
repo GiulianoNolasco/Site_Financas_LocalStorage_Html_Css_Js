@@ -208,6 +208,10 @@ function getTotals() {
   produtosQt.innerHTML = quantidadeProdutos;
   quantidade.innerHTML = totalProdutos;
   total.innerHTML = `R$ ${Math.abs(valorCompraTotal).toFixed(2)}`;
+
+  produtosQtTabela.innerHTML = quantidadeProdutos;
+  quantidadeTabela.innerHTML = totalProdutos;
+  totalTabela.innerHTML = `R$ ${Math.abs(valorCompraTotal).toFixed(2)}`;
 }
 
 const getItensBD = () =>
