@@ -257,6 +257,7 @@ body {
 .tabela {
   height: auto;
   width: auto;
+  min-width: 100%;
   color: black;
   font-size: 10rem;
   background-color: rgba(249, 246, 246, 0.5);

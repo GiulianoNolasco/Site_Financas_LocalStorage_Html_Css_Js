@@ -12,30 +12,40 @@ MostrarLancarDespesa = () => {
   );
   informacoesLancarDespesa.classList.toggle("esconder");
 };
-// ############################# MUDARIMAGEM EFETUAR REGISTRO #########################################################
+// ############################# MUDAR IMAGEM EFETUAR REGISTRO #########################################################
 const MudaClass = () => {
   let opcaoescolhida = document.querySelector("#type");
 
   if (opcaoescolhida.value === "Saída") {
     Receita1.classList.add("divimg2");
     Receita1.classList.remove("divimg1");
+    Receita1.classList.remove("divimg3");
     Receita2.classList.add("sombravermelha");
     Receita2.classList.remove("sombraverde");
-    label1.innerHTML = "Nome Saída";
-    label2.innerHTML = "Valor Saída";
     amount.classList.remove("inputreceita");
     amount.classList.add("inputdespesa");
-  } else {
+  } else if (opcaoescolhida.value === "Entrada") {
     Receita1.classList.add("divimg1");
     Receita1.classList.remove("divimg2");
+    Receita1.classList.remove("divimg3");
     Receita2.classList.add("sombraverde");
     Receita2.classList.remove("sombravermelha");
-    label1.innerHTML = "Nome Entrada";
-    label2.innerHTML = "Valor Entrada";
+    Receita2.classList.remove("sombrabranca");
+
+    amount.classList.add("inputreceita");
+    amount.classList.remove("inputdespesa");
+  } else {
+    Receita1.classList.add("divimg3");
+    Receita1.classList.remove("divimg1");
+    Receita1.classList.remove("divimg2");
+    Receita2.classList.add("sombrabranca");
+    Receita2.classList.remove("sombraverde");
+    Receita2.classList.remove("sombravermelha");
     amount.classList.add("inputreceita");
     amount.classList.remove("inputdespesa");
   }
 };
+
 // ##############################LOCAL STORAGE########################################################
 
 const tbody = document.querySelector("tbody");
@@ -81,14 +91,17 @@ function insertItem(item, index) {
   tr.innerHTML = `
     <td>${item.desc}</td>
     <td>R$ ${item.amount}</td>
-    <td class="columnType">${
+    <td>${
       item.type === "Entrada"
-        ? '<i class="bx bxs-chevron-up-circle"></i>'
-        : '<i class="bx bxs-chevron-down-circle"></i>'
+        ? '<i style=" color: green;" class="fa-regular fa-plus"></i>'
+        : '<i style=" color: red;"  class="fa-solid fa-minus"></i>'
     }</td>
-    <td class="columnAction">
-      <button onclick="deleteItem(${index})"><i class="fa-solid fa-x"></i></button>
-    </td>
+    <td>
+    <a class= "excluirBotao"
+    onclick="deleteItem(${index})">
+    <i class="fa-solid fa-x"></i>
+    </a>
+      </td>
   `;
 
   tbody.appendChild(tr);
@@ -123,9 +136,9 @@ function getTotals() {
 
   const totalItems = (totalIncomes - totalExpenses).toFixed(2);
 
-  incomes.innerHTML = totalIncomes;
-  expenses.innerHTML = totalExpenses;
-  total.innerHTML = totalItems;
+  incomes.innerHTML = `R$ ${totalIncomes}`;
+  expenses.innerHTML = `R$ ${totalExpenses}`;
+  total.innerHTML = `R$ ${totalItems}`;
 }
 
 const getItensBD = () => JSON.parse(localStorage.getItem("banco")) ?? [];

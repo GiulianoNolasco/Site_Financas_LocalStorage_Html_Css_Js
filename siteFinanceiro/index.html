@@ -5,13 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SGF - Sistema de Gestão Financeira</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/fontawesome.min.css"
-      integrity="sha512-cHxvm20nkjOUySu7jdwiUxgGy11vuVPE9YeK89geLMLMMEOcKFyS2i+8wo0FOwyQO/bL8Bvq1KMsqK4bbOsPnA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" href="assets/cifrao.png" type="image/x-icon" />
   </head>
@@ -30,7 +24,7 @@
         </div>
         <div class="saldosh2">
           <h2>Total:</h2>
-          <span class="incomes">0.00</span>
+          <span class="total">0.00</span>
         </div>
       </div>
     </div>
@@ -40,13 +34,13 @@
         <div class="linha">
           <div
             id="Receita1"
-            class="divimg1"
+            class="divimg3"
             onclick="MostrarLancarReceita()"
           ></div>
           <div class="textocard">
             <h2
               id="Receita2"
-              class="sombraverde"
+              class="sombrabranca"
               onclick="MostrarLancarReceita()"
             >
               Efetuar Registro
@@ -55,19 +49,21 @@
         </div>
 
         <div class="informacoes esconder" id="informacoesLancarReceita">
-          <div class="divselect">
-            <select id="type" class="select" onchange="MudaClass()">
-              <option></option>
-              <option value="Entrada" class="option1">Entrada</option>
-              <option value="Saída" class="option2">Saída</option>
-            </select>
-          </div>
+            <div class="ls-custom-select">
+              <select id="type" class="ls-select" onchange="MudaClass()">
+                <optgroup>
+                <option>Escolher</option>
+                <option value="Entrada" class="option1">Entrada</option>
+                <option value="Saída" class="option2">Saída</option>
+                </optgroup>
+              </select>
+            </div>
           <div class="divlabeleinput">
-            <label id="label1" for=""> </label>
+            <label id="label1" for="">Nome:</label>
             <input type="text" id="desc" />
           </div>
           <div class="divlabeleinput">
-            <label id="label2" for=""> </label>
+            <label id="label2" for="">Valor:</label>
             <input class="inputreceita" type="number" id="amount" />
           </div>
 
@@ -76,42 +72,15 @@
           </button>
         </div>
       </div>
-      <!-- <div class="bloco">
-        <div class="linha">
-          <div class="divimg2" onclick="MostrarLancarDespesa()"></div>
-          <div class="textocard">
-            <h2 class="sombravermelha" onclick="MostrarLancarDespesa()">
-              Lançar Despesa
-            </h2>
-          </div>
-        </div>
 
-        <div class="informacoes esconder" id="informacoesLancarDespesa">
-          <div class="divlabeleinput">
-            <label for="">Nome despesa: </label>
-            <input type="text" id="nomedespesa" />
-          </div>
-          <div class="divlabeleinput">
-            <label for="">Valor despesa: </label>
-            <input class="inputdespesa" type="number" id="valordespesa" />
-          </div>
-          <button
-            id="btnRegistrarDespesa"
-            class="botao"
-            onclick="RegistrarDespesa()"
-          >
-          Registrar
-          </button>
-        </div>
-      </div> -->
       <div class="divtabela">
         <table class="tabela">
           <thead >
             <tr>
               <th>Descrição</th>
               <th class="columnAmount">Valor</th>
-              <th class="columnType">Excluir</th>
-              <th class="columnAction"></th>
+              <th class="columnType">Tipo</th>
+              <th class="columnAction">Excluir</th>
             </tr>
           </thead>
           <tbody ></tbody>
