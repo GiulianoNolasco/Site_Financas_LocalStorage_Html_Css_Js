@@ -1,3 +1,43 @@
+// ############################## VARIÁVEIS PRODUTOS ########################################################
+//Produto 1
+let produto1Nome = "Pão";
+let produto1Valor = 2.0;
+IdProduto1.innerHTML = `${produto1Nome} R$ ${produto1Valor.toFixed(2)}`;
+
+//Produto 2
+let produto2Nome = "Feijão";
+let produto2Valor = 7.87;
+IdProduto2.innerHTML = `${produto2Nome} R$ ${produto2Valor.toFixed(2)}`;
+
+//Produto 3
+let produto3Nome = "Arroz";
+let produto3Valor = 6.98;
+IdProduto3.innerHTML = `${produto3Nome} R$ ${produto3Valor.toFixed(2)}`;
+
+//Produto 4
+let produto4Nome = "Farinha";
+let produto4Valor = 8.99;
+IdProduto4.innerHTML = `${produto4Nome} R$ ${produto4Valor.toFixed(2)}`;
+
+//Produto 5
+let produto5Nome = "Açucar";
+let produto5Valor = 4.7;
+IdProduto5.innerHTML = `${produto5Nome} R$ ${produto5Valor.toFixed(2)}`;
+
+//Produto 6
+let produto6Nome = "Macarrão";
+let produto6Valor = 2.9;
+IdProduto6.innerHTML = `${produto6Nome} R$ ${produto6Valor.toFixed(2)}`;
+
+//Produto 7
+let produto7Nome = "Bolacha";
+let produto7Valor = 6.44;
+IdProduto7.innerHTML = `${produto7Nome} R$ ${produto7Valor.toFixed(2)}`;
+
+//Produto 8
+let produto8Nome = "Óleo";
+let produto8Valor = 8.47;
+IdProduto8.innerHTML = `${produto8Nome} R$ ${produto8Valor.toFixed(2)}`;
 // ##############################LOCAL STORAGE########################################################
 
 const tbody = document.querySelector("tbody");
@@ -14,9 +54,9 @@ btnProduto1.onclick = () => {
     temOProduto.amount++;
   } else {
     items.push({
-      product: "Pão",
+      product: produto1Nome,
       amount: 1,
-      price: 2,
+      price: produto1Valor,
     });
   }
 
@@ -31,9 +71,9 @@ btnProduto2.onclick = () => {
     temOProduto.amount++;
   } else {
     items.push({
-      product: "Feijão",
+      product: produto2Nome,
       amount: 1,
-      price: 7.87,
+      price: produto2Valor,
     });
   }
 
@@ -48,9 +88,9 @@ btnProduto3.onclick = () => {
     temOProduto.amount++;
   } else {
     items.push({
-      product: "Arroz",
+      product: produto3Nome,
       amount: 1,
-      price: 6.98,
+      price: produto3Valor,
     });
   }
 
@@ -65,9 +105,9 @@ btnProduto4.onclick = () => {
     temOProduto.amount++;
   } else {
     items.push({
-      product: "Farinha",
+      product: produto4Nome,
       amount: 1,
-      price: 8.99,
+      price: produto4Valor,
     });
   }
 
@@ -82,9 +122,9 @@ btnProduto5.onclick = () => {
     temOProduto.amount++;
   } else {
     items.push({
-      product: "Açucar",
+      product: produto5Nome,
       amount: 1,
-      price: 4.7,
+      price: produto5Valor,
     });
   }
 
@@ -99,9 +139,9 @@ btnProduto6.onclick = () => {
     temOProduto.amount++;
   } else {
     items.push({
-      product: "Macarrão",
+      product: produto6Nome,
       amount: 1,
-      price: 2.9,
+      price: produto6Valor,
     });
   }
 
@@ -116,28 +156,31 @@ btnProduto7.onclick = () => {
     temOProduto.amount++;
   } else {
     items.push({
-      product: "Bolacha",
+      product: produto7Nome,
       amount: 1,
-      price: 6.4,
+      price: produto7Valor,
+    });
+  }
+  setItensBD();
+
+  loadItens();
+};
+
+btnProduto8.onclick = () => {
+  const temOProduto = items.find((produto) => produto.product === "Óleo");
+  if (temOProduto) {
+    temOProduto.amount++;
+  } else {
+    items.push({
+      product: produto8Nome,
+      amount: 1,
+      price: produto8Valor,
     });
   }
 
-  btnProduto8.onclick = () => {
-    const temOProduto = items.find((produto) => produto.product === "Óleo");
-    if (temOProduto) {
-      temOProduto.amount++;
-    } else {
-      items.push({
-        product: "Óleo",
-        amount: 1,
-        price: 8.74,
-      });
-    }
+  setItensBD();
 
-    setItensBD();
-
-    loadItens();
-  };
+  loadItens();
 };
 
 // CONTINUACAO LOCAL STORAGE #########
@@ -196,14 +239,13 @@ function getTotals() {
   let totalProdutos = 0;
   let totalPrecos = 0;
   let quantidadeProdutos = 0;
-
+  let valorCompraTotal = 0;
   items.forEach((element) => {
     quantidadeProdutos++;
     totalProdutos += element.amount;
     totalPrecos += element.price;
+    valorCompraTotal += element.amount * element.price;
   });
-
-  let valorCompraTotal = totalProdutos * totalPrecos;
 
   produtosQt.innerHTML = quantidadeProdutos;
   quantidade.innerHTML = totalProdutos;

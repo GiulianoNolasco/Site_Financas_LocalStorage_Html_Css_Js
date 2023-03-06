@@ -86,7 +86,17 @@ body {
 .saldoatualizadotitulo:hover {
   transform: scale(1.1);
 }
-
+.descricaoproduto h2 {
+  background-color: rgba(255, 255, 255, 0.432);
+  border-radius: 3rem;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  color: blueviolet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2.5rem;
+}
 .saldosh2 {
   display: flex;
   justify-content: center;
@@ -150,14 +160,6 @@ body {
   gap: 2rem;
   flex-direction: column;
 }
-/* .divimg1 h2 {
-  font-size: 3rem;
-  font-weight: 700;
-}
-.divimg1 h3 {
-  font-size: 2rem;
-  font-weight: 500;
-} */
 
 .produtosEfeito:hover {
   box-shadow: 0 0 2rem white;
@@ -299,6 +301,7 @@ td {
   height: 25rem;
   width: 25rem;
   display: flex;
+  border: 0.3rem solid rebeccapurple;
   border-radius: 2rem;
   justify-content: center;
   align-items: center;
@@ -314,6 +317,8 @@ td {
 }
 
 .produto_2 {
+  border: 0.3rem solid rebeccapurple;
+
   height: 25rem;
   width: 25rem;
   display: flex;
@@ -332,6 +337,8 @@ td {
 }
 
 .produto_3 {
+  border: 0.3rem solid rebeccapurple;
+
   height: 25rem;
   width: 25rem;
   display: flex;
@@ -350,6 +357,8 @@ td {
 }
 
 .produto_4 {
+  border: 0.3rem solid rebeccapurple;
+
   height: 25rem;
   width: 25rem;
   display: flex;
@@ -368,6 +377,8 @@ td {
 }
 
 .produto_5 {
+  border: 0.3rem solid rebeccapurple;
+
   height: 25rem;
   width: 25rem;
   display: flex;
@@ -386,6 +397,8 @@ td {
 }
 
 .produto_6 {
+  border: 0.3rem solid rebeccapurple;
+
   height: 25rem;
   width: 25rem;
   display: flex;
@@ -404,6 +417,8 @@ td {
 }
 
 .produto_7 {
+  border: 0.3rem solid rebeccapurple;
+
   height: 25rem;
   width: 25rem;
   display: flex;
@@ -422,6 +437,8 @@ td {
 }
 
 .produto_8 {
+  border: 0.3rem solid rebeccapurple;
+
   height: 25rem;
   width: 25rem;
   display: flex;
@@ -457,7 +474,11 @@ td {
   }
 
   .saldosh2 {
-    font-size: 8rem;
+    font-size: 12rem;
+  }
+
+  .descricaoproduto {
+    font-size: 12rem;
   }
   .saldosh2tabela {
     font-size: 12rem;
@@ -486,6 +507,10 @@ td {
   .saldosh2 {
     font-size: 8rem;
   }
+
+  .descricaoproduto {
+    font-size: 8rem;
+  }
   .saldosh2tabela {
     font-size: 12rem;
   }
@@ -507,6 +532,10 @@ td {
     font-size: 17rem;
   }
   .saldosh2 {
+    font-size: 8rem;
+  }
+
+  .descricaoproduto {
     font-size: 8rem;
   }
   .saldosh2tabela {
@@ -535,6 +564,10 @@ td {
   .saldosh2 {
     font-size: 8rem;
   }
+
+  .descricaoproduto {
+    font-size: 8rem;
+  }
   .saldosh2tabela {
     font-size: 8rem;
   }
@@ -552,6 +585,10 @@ td {
     font-size: 17rem;
   }
   .saldosh2 {
+    font-size: 8rem;
+  }
+
+  .descricaoproduto {
     font-size: 8rem;
   }
   .saldosh2tabela {
@@ -573,6 +610,10 @@ td {
   .saldosh2 {
     font-size: 8rem;
   }
+
+  .descricaoproduto {
+    font-size: 8rem;
+  }
   .saldosh2tabela {
     font-size: 8rem;
   }
@@ -591,6 +632,10 @@ td {
     padding-bottom: 0;
   }
   .saldosh2 {
+    font-size: 8rem;
+  }
+
+  .descricaoproduto {
     font-size: 8rem;
   }
   .saldosh2tabela {
