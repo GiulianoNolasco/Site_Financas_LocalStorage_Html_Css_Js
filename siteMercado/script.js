@@ -38,6 +38,7 @@ IdProduto7.innerHTML = `${produto7Nome} R$ ${produto7Valor.toFixed(2)}`;
 let produto8Nome = "Óleo";
 let produto8Valor = 8.47;
 IdProduto8.innerHTML = `${produto8Nome} R$ ${produto8Valor.toFixed(2)}`;
+
 // ##############################LOCAL STORAGE########################################################
 
 const tbody = document.querySelector("tbody");
@@ -46,7 +47,7 @@ const quantidade = document.querySelector("#quantidade");
 const total = document.querySelector("#total");
 
 let items;
-// ##### CADASTRAR PRODUTOS ######
+// ############################## CADASTRAR PRODUTOS ########################################################
 
 btnProduto1.onclick = () => {
   const temOProduto = items.find((produto) => produto.product === "Pão");
@@ -183,7 +184,7 @@ btnProduto8.onclick = () => {
   loadItens();
 };
 
-// CONTINUACAO LOCAL STORAGE #########
+// CONTINUACAO LOCAL STORAGE ##########################################################################################
 
 function deleteItem(index) {
   items.splice(index, 1);
